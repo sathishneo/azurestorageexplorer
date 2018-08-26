@@ -1,12 +1,51 @@
 ## Table of Contents
 
 - [Deploy to GitHub pages project site](#deploy-to-ghpages)
+- [master vs gh-pages branch](#master-ghpages-branch)
 
 ## Deploy to GitHub pages project site
 
 To deploy a react application from `create-react-app` it to the github pages i followed the below steps
+
 - credit goes to the online teachers out there
-<br>
+  <br>
+- once we have the `create-react-app` run
+- go inside that directory and run `git init` which will give the git configuration
+- now inside the react app dir do `npm install --save gh-pages` to install the github pages to host the app to the site
+- upon successful installation open the `package.json` to view the gh-pages dependency
+  - under the `"private": "true"` add the `"homepage": "http://<github_account_name>.github.io/<react_app_folder_name>/",`
+  - then add the following to the `"scripts" : {}` key
+    - `"predeploy" : "npm run build"`
+    - `"deploy" : "gh-pages -d build"`
+  - save the changes to package.json
+- open up the terminal/cmd prompt then do `npm run deploy` and give it a minute to publish your app to the site
+- open running successfully it will display the following in the terminal
+
+  ```
+  The build folder is ready to be deployed.
+  To publish it at http://<github_account_name>.github.io/<react_app_folder_name>/, run:
+
+  npm run deploy
+
+  Find out more about deployment here:
+
+  http://bit.ly/xxXXxXY
+
+  ...
+  ...
+  Published
+  ```
+
+- once you get this, click the URL it says that the site is published to
+- You should be able to see the default react application page
+- This means you have successfully done!!
+
+## master vs gh-pages branch
+
+- Once you have the gh-pages successfully deployed your site to the github.io url
+- submit your changes to the master branch.
+- GitHub provides some tools to do CICD from our changes and finally getting it to the github io url
+
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
