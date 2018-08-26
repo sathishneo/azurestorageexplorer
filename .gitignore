@@ -21,7 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # untill custom README.md
-README.md
+#README.md
 
 # untill i find what package-lock.json is upto
 package-lock.json
