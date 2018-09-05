@@ -5,10 +5,12 @@
   "homepage": "http://sathishneo.github.io/azurestorageexplorer/",
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "create-react-app": "^1.5.2",
     "gh-pages": "^1.2.0",
+    "package.json": "^2.0.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.5"
+    "react-scripts": "^1.1.5"
   },
   "scripts": {
     "predeploy": "npm run build",
